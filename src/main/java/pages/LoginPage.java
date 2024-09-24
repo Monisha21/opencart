@@ -45,6 +45,8 @@ public class LoginPage {
         return elementUtils.waitForTitle(10, "Account Login");
     }
 
-
+    public String getLoginPageURL(){
+        return elementUtils.getPageURL();
+    }
 
 }

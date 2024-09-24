@@ -13,7 +13,7 @@ public class BaseTest {
     DriverFactory driverFactory;
     private WebDriver driver;
     Properties prop;
-    LoginPage loginPage;
+    public LoginPage loginPage;
 
     @BeforeTest
     public void setUp(){
