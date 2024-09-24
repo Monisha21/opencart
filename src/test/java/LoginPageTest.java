@@ -18,5 +18,4 @@ public class LoginPageTest extends BaseTest {
         Assert.assertTrue(url.contains(Constants.LoginPageURL));
     }
 
-
 }

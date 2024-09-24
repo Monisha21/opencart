@@ -8,6 +8,7 @@ import utils.ElementUtils;
 public class LoginPage {
 
     WebDriverWait webDriverWait;
+    private WebDriver driver;
     private ElementUtils elementUtils;
 
     //locators
@@ -19,11 +20,12 @@ public class LoginPage {
 
     //Constructors
     public LoginPage(WebDriver driver){
+        this.driver = driver;
         elementUtils = new ElementUtils(driver);
     }
 
     //page functions
-    public void login(String username, String password){
+    public MyAccountPage login(String username, String password){
         elementUtils.doSendKeys(emailAddress, username);
         elementUtils.doSendKeys(passwordtxt,password);
         try {
@@ -38,7 +40,7 @@ public class LoginPage {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-//        return new MyAccountPage(driver);
+        return new MyAccountPage(driver);
     }
 
     public String getLoginPageTitle(){

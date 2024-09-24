@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Opencart automation suite" verbose="3" thread-count="3" parallel="tests">
+    <test name="Opencart Loginpage">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="LoginPageTest"></class>
+        </classes>
+    </test>
+
+    <test name="Opencart Myaccountpage">
+        <classes>
+            <class name="MyAccountPageTest"></class>
+        </classes>
+    </test>
+</suite>
